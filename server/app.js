@@ -5,10 +5,14 @@ require('dotenv').config();
 
 // Configure express app
 const path = require('path');
+const methodOverride = require('method-override');
 const express = require("express");
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
+
+// Parsing
+app.use(methodOverride('_method'));
 app.use(express.urlencoded( {extended: true }));
 
 // Import routers

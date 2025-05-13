@@ -23,9 +23,31 @@ async function postLetter(req, res) {
     res.redirect("/letters")
 };
 
+// GET /letters/:id/edit --> renders form to edit letter
+async function getEditLetter(req, res) {
+    const letter = await db.getALetter(req.params.id);
+    console.log("Letter: ", letter);
+    res.render("editLetter", {
+        title: "Edit Letter",
+        letter: letter,
+    });
+};
+
+// PATCH /letters/:id --> updates a component of the letter
+async function patchLetter(req, res, next) {
+    try {
+        const { title, content } = req.body;
+        db.editLetter(req.params.id, title, content);
+        res.redirect("/letters");
+    } catch (err) {
+        next(err);
+    }
+};
 
 module.exports = {
     getLetters,
     getNewLetter,
-    postLetter
+    postLetter,
+    getEditLetter,
+    patchLetter
 };

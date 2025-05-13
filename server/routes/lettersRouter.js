@@ -17,9 +17,9 @@ const lettersController = require("../controllers/lettersController")
 lettersRouter.get("/",          lettersController.getLetters);
 lettersRouter.get("/new",       lettersController.getNewLetter);
 lettersRouter.post("/",         lettersController.postLetter);
-lettersRouter.get("/:id/edit",  (req, res) => res.send("Renders form to edit letter."));
-lettersRouter.patch("/:id",     (req, res) => res.send("Updates a component of the letter."));
-lettersRouter.put("/:id",       (req, res) => res.send("Updates entire letter (similar to how we implemented it previously."));
+lettersRouter.get("/:id/edit",  lettersController.getEditLetter);
+lettersRouter.patch("/:id",     lettersController.patchLetter);
+//lettersRouter.put("/:id",       (req, res) => res.send("Updates entire letter (similar to how we implemented it previously."));
 lettersRouter.delete("/:id",    (req, res) => res.send("Deletes letter."));
 
 module.exports = lettersRouter;

@@ -13,6 +13,7 @@
                 <li>
                     <strong>Title:</strong> <%= letter.title %> <br>
                     <strong>Content:</strong> <%- letter.content %>
+                    <a href="/letters/<%= letter.id %>/edit">Update</a>
                 </li>
              <% }); %>
         <% } %>  

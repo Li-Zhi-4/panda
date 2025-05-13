@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/letters/<%= letter.id %>" method="post">
+        <input type="hidden" name="_method" value="PATCH" />
+        <label>Title: <input type="text" name="title" id="title" value="<%= letter.title %>" required></label>
+        <label>
+            Content:
+            <textarea name="content" id="content" required><%- letter.content %></textarea>
+        </label>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/letters">Back to letters</a>
+</body>
+</html>
