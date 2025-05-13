@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/letters" method="post">
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" required>
+        <label for="content">Content: </label>
+        <input type="text" name="content" id="content" required>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/letters">Back to letters</a>
+</body>
+</html>

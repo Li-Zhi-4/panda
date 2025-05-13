@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letters</title>
+    <title><%= title %></title>
 </head>
 <body>
-    <h1>Letters Index</h1>
+    <h1><%= title %></h1>
     <ul>
-        
+        <% if (locals.letters) { %>
+            <% letters.forEach( (letter) => { %>
+                <li>
+                    <strong>Title:</strong> <%= letter.title %> <br>
+                    <strong>Content:</strong> <%- letter.content %>
+                </li>
+             <% }); %>
+        <% } %>  
     </ul>
+    <a href="/letters/new">Create new letter</a>
 </body>
 </html>
