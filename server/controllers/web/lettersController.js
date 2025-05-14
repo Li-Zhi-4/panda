@@ -1,4 +1,4 @@
-const db = require("../db/models/letters");
+const db = require("../../db/models/letters");
 
 // GET /letters --> renders lists all letters
 async function getLetters(req, res) {
@@ -26,9 +26,6 @@ async function postLetter(req, res) {
 // GET /letters/:id/edit --> renders form to edit letter
 async function getEditLetter(req, res) {
     const letter = await db.getALetter(req.params.id);
-    console.log("Letter: ", letter.id);
-    console.log('params.id →', req.params.id);
-
     res.render("editLetter", {
         title: "Edit Letter",
         letter: letter,
@@ -48,8 +45,12 @@ async function patchLetter(req, res, next) {
 
 // DELETE /letters/:id --> deletes letter
 async function deleteLetter(req, res, next) {
-    db.deleteLetter(req.params.id);
-    res.redirect("/letters");
+    try {
+        db.deleteLetter(req.params.id);
+        res.redirect("/letters");
+    } catch (err) {
+        next(err);
+    }
 };
 
 module.exports = {

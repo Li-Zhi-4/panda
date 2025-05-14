@@ -15,13 +15,16 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 // Import routers
-const lettersRouter = require("./routes/lettersRouter")
+const webLettersRouter = require("./routes/web/lettersRouter")
+const apiLettersRouter = require("./routes/api/lettersRouter")
 
-// Routes
+// Web Routes
 app.get("/", (req, res) => res.send("This is the home!"));
-app.use("/letters", lettersRouter);
+app.use("/letters", webLettersRouter);
 
 
+// API Routes
+app.use("/api/letters", apiLettersRouter);
 
 // Set up port for listening
 const PORT = process.env.PORT || 3000;

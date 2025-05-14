@@ -12,7 +12,7 @@
 
 const { Router } = require("express");
 const lettersRouter = Router();
-const lettersController = require("../controllers/lettersController")
+const lettersController = require("../../controllers/web/lettersController")
 
 lettersRouter.get("/",          lettersController.getLetters);
 lettersRouter.get("/new",       lettersController.getNewLetter);
