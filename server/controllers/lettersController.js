@@ -26,7 +26,9 @@ async function postLetter(req, res) {
 // GET /letters/:id/edit --> renders form to edit letter
 async function getEditLetter(req, res) {
     const letter = await db.getALetter(req.params.id);
-    console.log("Letter: ", letter);
+    console.log("Letter: ", letter.id);
+    console.log('params.id →', req.params.id);
+
     res.render("editLetter", {
         title: "Edit Letter",
         letter: letter,
@@ -42,6 +44,12 @@ async function patchLetter(req, res, next) {
     } catch (err) {
         next(err);
     }
+}; 
+
+// DELETE /letters/:id --> deletes letter
+async function deleteLetter(req, res, next) {
+    db.deleteLetter(req.params.id);
+    res.redirect("/letters");
 };
 
 module.exports = {
@@ -49,5 +57,6 @@ module.exports = {
     getNewLetter,
     postLetter,
     getEditLetter,
-    patchLetter
+    patchLetter,
+    deleteLetter
 };

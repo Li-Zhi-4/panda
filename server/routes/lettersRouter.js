@@ -20,6 +20,6 @@ lettersRouter.post("/",         lettersController.postLetter);
 lettersRouter.get("/:id/edit",  lettersController.getEditLetter);
 lettersRouter.patch("/:id",     lettersController.patchLetter);
 //lettersRouter.put("/:id",       (req, res) => res.send("Updates entire letter (similar to how we implemented it previously."));
-lettersRouter.delete("/:id",    (req, res) => res.send("Deletes letter."));
+lettersRouter.delete("/:id",    lettersController.deleteLetter);
 
 module.exports = lettersRouter;

@@ -7,8 +7,7 @@
 </head>
 <body>
     <h1><%= title %></h1>
-    <form action="/letters/<%= letter.id %>" method="post">
-        <input type="hidden" name="_method" value="PATCH" />
+    <form action="/letters/<%= letter.id %>?_method=PATCH" method="post">
         <label>Title: <input type="text" name="title" id="title" value="<%= letter.title %>" required></label>
         <label>
             Content:

@@ -5,7 +5,7 @@ const pool = require("../pools");
  * @returns all letters created
  */
 async function getAllLetters() {
-    const { rows } = await pool.query("SELECT * FROM letters");
+    const { rows } = await pool.query("SELECT * FROM letters;");
     return rows;
 }
 
@@ -16,7 +16,7 @@ async function getAllLetters() {
  */
 async function getALetter(id) {
     const { rows } = await pool.query(
-        'SELECT title, content FROM letters WHERE id = $1',
+        'SELECT id, title, content FROM letters WHERE id = $1;',
         [id]
     );
     return rows[0] || null;
@@ -38,11 +38,30 @@ async function createLetter(title, content) {
     return rows[0];
 }
 
-
+/**
+ * Edits a letter and inserts the edits into the letters table.
+ * @param {number} id 
+ * @param {string} title 
+ * @param {string} content 
+ * @returns the edited letter
+ */
 async function editLetter(id, title, content) {
     const { rows } = await pool.query(
-        `UPDATE letters SET title=$1, content=$2 WHERE id=$3`,
+        `UPDATE letters SET title=$1, content=$2 WHERE id=$3 RETURNING *;`,
         [title, content, id]
+    )
+    return rows[0] || null;
+}
+
+/**
+ * Deletes a letter from the letters table.
+ * @param {number} id 
+ * @returns the deleted letter
+ */
+async function deleteLetter(id) {
+    const { rows } = await pool.query(
+        `DELETE FROM letters WHERE id=$1 RETURNING *;`,
+        [id]
     )
     return rows[0] || null;
 }
@@ -51,5 +70,6 @@ module.exports = {
     getAllLetters,
     getALetter,
     createLetter,
-    editLetter
+    editLetter,
+    deleteLetter
 };

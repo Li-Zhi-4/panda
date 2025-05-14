@@ -1,5 +1,3 @@
-
-
 //Configure environment variables
 require('dotenv').config();
 
@@ -12,13 +10,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
 // Parsing
+app.use(express.urlencoded( {extended: true} ));
+app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(express.urlencoded( {extended: true }));
 
 // Import routers
 const lettersRouter = require("./routes/lettersRouter")
-
-
 
 // Routes
 app.get("/", (req, res) => res.send("This is the home!"));
