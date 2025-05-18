@@ -7,6 +7,8 @@ div.letter {
     height: 100%;
 
     padding: clamp(16px, 5vw, 32px);
+    border: 1px solid #D4DBE2;
+    outline-offset: -1px; 
 }
 
 div.letter-content {
@@ -42,6 +44,8 @@ div.letter-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    padding: 0px 6px;
 }
 
 div.nav {

@@ -4,7 +4,11 @@ body {
 }
 
 div.box {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
   height: 100vh;
   width: 600px;
 }
