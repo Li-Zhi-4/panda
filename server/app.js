@@ -4,8 +4,11 @@ require('dotenv').config();
 // Configure express app
 const path = require('path');
 const methodOverride = require('method-override');
+const cors = require('cors');
 const express = require("express");
+
 const app = express();
+app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
