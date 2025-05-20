@@ -1,0 +1,176 @@
+form.letter-form {
+    height: 100%;
+}
+
+div.letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    box-sizing: border-box;
+    height: 100%;
+
+    padding: clamp(16px, 5vw, 32px);
+    border: 1px solid #D4DBE2;
+    outline-offset: -1px; 
+}
+
+div.letter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.letter-content.written-content {
+    height: 100%;
+}
+
+/* Toolbar */
+div.letter-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 6px;
+}
+
+div.toolbar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    height: 100%;
+}
+
+button.icon {
+    height: 32px;
+    width: 32px;
+    background-color: #D4DBE2;
+}
+
+/* Letter Nav */
+div.letter-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    padding: 0px 6px;
+}
+
+div.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    width: 150px;
+}
+
+div.saved {
+    width: auto;
+    font-size: 12px;
+}
+
+/* Text Styles */
+h1 { 
+    font-size: 32px;
+    font-weight: 400;
+
+    padding: 0px 6px;
+
+    color: #323438;
+}
+
+span.p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+span.p.word-count {
+    color: #D4DBE2;
+}
+
+span.p.content {
+    padding: 0px 6px;
+
+    color: #323438;
+}
+
+input#title {
+    padding: 0px 6px;
+    font-size: 32px;
+}
+
+textarea#content {
+    height: 100%;
+    padding: 0px 6px;
+
+    font-size: 16px;
+}
+
+textarea#content, input#title{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+textarea#content:focus, input#title:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+    color: #2A7E3B;
+}
+
+div.nav>a {
+    text-decoration: none;
+}
+
+button.send {
+    padding: 4px 12px;
+
+    border-radius: 8px;
+    border: none;
+    background-color: #2A7E3B;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Divider */
+div.divider-horizontal {
+    align-self: stretch;
+    height: 1px;
+    background-color: #D4DBE2;
+}
+
+div.divider-vertical {
+    align-self: stretch;
+    width: 1px;
+    background-color: #D4DBE2;
+}
+
+
+
+/* Tablet and above */
+@media (min-width: 360px) {
+
+}
+
+
+
+/* Desktop and above */
+@media (min-width: 768px) {
+
+}
+
+
+

@@ -1,0 +1,50 @@
+div.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+    width: 80px;
+    height: 100vh;
+    padding: 64px 8px;
+
+    box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+div.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Icons */
+a.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 8px;
+}
+
+a.home {
+    background-color: #E8F7E9;
+}
+
+img.icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+
+img.profile {
+    width: 64px;
+    height: 64px;
+}

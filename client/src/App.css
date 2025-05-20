@@ -11,4 +11,6 @@ div.box {
 
   height: 100vh;
   width: 600px;
+
+  border: 1px solid black;
 }
