@@ -1,0 +1,27 @@
+div.layout {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+
+    width: 100%;
+    background: linear-gradient(
+    to bottom,      
+    #E8F7E9 0%,     
+    #FFF 100%  
+  );
+}
+
+div.box {
+    display: flex;
+    flex-direction: column;
+
+    width: 600px;
+    height: 100%;
+}

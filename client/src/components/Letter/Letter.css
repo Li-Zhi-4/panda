@@ -9,6 +9,7 @@ div.letter {
     padding: clamp(16px, 5vw, 32px);
     border: 1px solid #D4DBE2;
     outline-offset: -1px; 
+    background-color: white;
 }
 
 div.letter-content {
@@ -61,7 +62,16 @@ div.nav {
 }
 
 div.nav.next {
+    align-items: end;
+    width: 100%;
     text-align: right;
+
+}
+
+div.nav.back {
+    align-items: start;
+    width: 100%;
+    text-align: left;
 }
 
 
@@ -78,6 +88,7 @@ h1 {
 span.p {
     font-size: 16px;
     font-weight: 400;
+    width: 100%;
 }
 
 span.p.word-count {

@@ -1,3 +1,6 @@
+
+
+/* Tabs */
 div.tab-bar {
     display: flex;
     flex-direction: column;
@@ -5,14 +8,8 @@ div.tab-bar {
     gap: 14px;
 
     padding-top: 12px;
-    border: 1px solid #D4DBE2;
+    border-bottom: 1px solid #D4DBE2;
     outline-offset: -1px; 
-    background-color: white;
-}
-
-img.logo {
-    height: 42px;
-    width: 42px;
 }
 
 /* Tabs */
@@ -51,4 +48,30 @@ a.tab-link.false {
     text-decoration: none;
     color: black;
     font-weight: 400;
+}
+
+
+/* Activity */
+div.activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 16px;
+
+    background-color: #EAF1E9;
+}
+
+
+button.view {
+    height: fit-content;
+    width: fit-content;
+
+    padding: 4px 8px;
+
+    border: none;
+    border-radius: 3px;
+    background-color: #2A7E3B;
+    color: white;
+    font-size: 12px;
 }
