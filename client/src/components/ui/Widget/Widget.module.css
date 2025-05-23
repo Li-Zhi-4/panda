@@ -1,0 +1,74 @@
+/* Widget Container */
+.widget {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+
+    padding: 24px;
+    height: var(--widget-height);
+    width: var(--widget-width);
+
+    box-shadow: var(--widget-boxshadow, none);
+    border-radius: 16px;
+    border: 2px solid var(--widget-border, none);
+    background: var(--widget-bg, none);
+    background-color: var(--widget-bg-colour);
+}
+
+
+
+/* Widget Title Section */
+.title-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--title-colour);     /* text colour */
+}
+
+.title-h1 {
+    font-size: 16px;
+    font-weight: 600;               /* bold */
+}
+
+/* Day/Month/Year Toggle */
+.title-toggle {
+    display: flex;
+    align-items: center;
+
+    padding: 4px 12px;
+    height: fit-content;
+    width: fit-content;
+
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;               /* semi-bold */
+    background-color: var(--toggle-bg-colour);
+}
+
+.title-toggle:hover {
+    background-color: var(--toggle-bg-hover);
+    cursor: pointer;
+}
+
+
+
+/* Light Theme */
+.light-theme {
+    --widget-border: #D4DBE2;       /* widget border colour */
+    --widget-bg-colour: white;      /* widget background colour */
+    --title-colour: #2A7E3B;        /* title text colour */
+    --toggle-bg-colour: #E8F7E9;    /* toggle background colour */
+    --toggle-bg-hover: #D7E7D8;     /* toggle background colour hover */
+}
+
+/* Dark Green Widget Theme */
+.dark-green-theme {
+    --widget-bg: linear-gradient(180deg, #184020 0%, #2A7E3B 100%);     /* widget background */
+    --widget-boxshadow: 0px 4px 0px 0px #1B4D25;                          /* widget boxshadow */
+    --title-colour: white;                                                /* title text colour */
+    --toggle-bg-colour: rgba(232, 247, 233, 0.25);                        /* toggle background colour */
+    --toggle-bg-hover: rgba(232, 247, 233, 0.5);                          /* toggle background colour hover */
+}

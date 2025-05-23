@@ -1,21 +1,17 @@
 import './App.css'
 
-import { Letter } from './components/Letter/Letter'
-import { LetterForm } from './components/LetterForm/LetterForm'
-import { Tabs } from './components/Tabs/Tabs'
-import { SideNavigation } from './components/SideNavigation/SideNavigation'
-import { ActivityFeed } from './components/ActivityFeed/ActivityFeed'
-import { DisplayLetter } from './layouts/DisplayLetter/DisplayLetter'
+import { Widget } from './components/ui/Widget/Widget'
 
 
 function App() {
 
   return (
     <div className='box'>
-      <ActivityFeed />
+      <Widget theme='light-theme' title='Title of Widget'>
+        <p>Content of Widget goes here...</p>
+      </Widget>
     </div>
-    // <DisplayLetter />
-  )
+  );
 }
 
 export default App
