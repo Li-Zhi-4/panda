@@ -1,15 +1,12 @@
 import './App.css'
 
-import { Widget } from './components/ui/Widget/Widget'
-
+import { Mailbox } from './components/widgets/Mailbox/Mailbox';
 
 function App() {
 
   return (
     <div className='box'>
-      <Widget theme='light-theme' title='Title of Widget'>
-        <p>Content of Widget goes here...</p>
-      </Widget>
+      <Mailbox />
     </div>
   );
 }

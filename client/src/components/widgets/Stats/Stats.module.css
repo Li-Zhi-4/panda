@@ -1,0 +1,56 @@
+/* Stats Container */
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 8px 0px 0px 0px;
+}
+
+
+/* Daily Stats Container - for words/letters per day/month/year */
+.daily-stats {
+    display: flex;
+    flex: row;
+
+    padding: 16px 8px;
+
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    span {
+        font-size: 64px;
+    }
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+
+    width: 100%;
+}
+
+.tag {
+    padding: 4px 24px;
+
+    border: 1px solid white;
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 500;
+}

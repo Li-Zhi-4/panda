@@ -1,0 +1,16 @@
+/* Timer Container */
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    color: #52525B;
+}
+
+/* Timer Display */
+.timer-display {
+    font-size: 64px;
+}
+

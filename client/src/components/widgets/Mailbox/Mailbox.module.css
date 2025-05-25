@@ -1,0 +1,81 @@
+
+
+/* Table Styling */
+table.mailbox {
+    box-sizing: border-box;
+
+    height: 108px;
+    width: 100%;
+
+    border-collapse: collapse;
+    background-color: #F4F4F5;
+    border-radius: 3px;
+}
+
+table.mailbox tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    height: auto;
+}
+
+table.mailbox tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    height: 36px;
+
+    border-bottom: 1px solid white;
+    background-color: #EAF1E9;
+}
+
+table.mailbox th {
+    padding: 8px 16px;
+    text-align: start;
+}
+
+table.mailbox td {
+    padding: 8px 16px;
+    text-align: end;
+}
+
+table.mailbox tr:last-child {
+    border-radius: 0px 0px 3px 3px;
+}
+
+table.mailbox tr:first-child {
+    border-radius: 3px 3px 0px 0px;
+}
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #2A7E3B;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pagination-button {
+    padding: 4px 12px;
+
+    background: none;
+    border: 1px solid #2A7E3B;
+    border-radius: 8px;
+    color: #2A7E3B;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pagination-button:hover {
+    cursor: pointer;
+}
