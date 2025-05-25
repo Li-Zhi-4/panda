@@ -1,0 +1,32 @@
+/* Entire Calendar component */
+:global(.react-calendar) {
+    width: 100%;
+    border: none;
+}
+
+/* Tile Components */
+:global(.react-calendar__tile) {
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+:global(.react-calendar__tile:hover) {
+    background-color: #E8F7E9;
+}
+
+:global(.react-calendar__tile--now) {
+    border: 1px solid #2A7E3B;
+    background-color: #E8F7E9;
+}
+
+:global(.react-calendar__tile--active) {
+    background: #2A7E3B;
+    color: white;
+}
+
+

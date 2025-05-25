@@ -1,12 +1,12 @@
 import './App.css'
 
-import { Mailbox } from './components/widgets/Mailbox/Mailbox';
+import { CalendarWidget } from './components/widgets/Calendar/CalendarWidget';
 
 function App() {
 
   return (
     <div className='box'>
-      <Mailbox />
+      <CalendarWidget />
     </div>
   );
 }
