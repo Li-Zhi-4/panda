@@ -1,8 +1,8 @@
 import './DisplayLetter.css'
 
-import { SideNavigation } from '../../components/SideNavigation/SideNavigation';
-import { Letter } from '../../components/Letter/Letter';
-import { Tabs } from '../../components/Tabs/Tabs';
+import { SideNavigation } from '../../SideNavigation/SideNavigation';
+import { Letter } from '../../Letter/Letter';
+import { Tabs } from '../../Tabs/Tabs';
 
 function DisplayLetter() {
     return (

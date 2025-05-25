@@ -1,0 +1,33 @@
+.rows {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dashboard-container {
+    box-sizing: border-box;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.dashboard-left {
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+}
+
+.dashboard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 400px;
+}

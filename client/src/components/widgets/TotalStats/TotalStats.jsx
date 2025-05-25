@@ -16,7 +16,7 @@ function TotalStats() {
                 <table className={styles.totalStats}>
                     <tbody>
                         {Object.entries(data).map( ([key, value]) => (
-                            <tr>
+                            <tr key={key}>
                                 <th>{key}</th>
                                 <td>{value}</td>
                             </tr>

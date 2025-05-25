@@ -28,13 +28,16 @@ table.totalStats tr {
 }
 
 table.totalStats th {
-    padding: 8px 0px;
+    padding: 4px 0px;
     text-align: start;
 }
 
 table.totalStats td {
-    padding: 8px 0px;
+    padding: 4px 0px;
+    
     text-align: end;
+    color: #52525B;
+    font-weight: 400;
 }
 
 table.totalStats tr:last-child {
