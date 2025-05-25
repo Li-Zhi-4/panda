@@ -1,0 +1,26 @@
+/* Profile Avatar Container */
+.profile-avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0px 12px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Text Styling */
+.username {
+    font-weight: 500;
+    color: #191D21;
+}
+
+.handle {
+    font-weight: 400;
+    color: #465A6F;
+}

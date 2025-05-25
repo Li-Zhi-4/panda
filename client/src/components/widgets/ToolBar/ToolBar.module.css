@@ -1,0 +1,23 @@
+/* Toolbar Container */
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* Button Styling */
+.new-letter {
+    padding: 12px 24px;
+    height: fit-content;
+    width: fit-content;
+
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 500px;
+    border: none;
+    background-color: #2A7E3B;
+    color: white;
+}
