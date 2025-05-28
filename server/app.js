@@ -20,6 +20,7 @@ app.use(methodOverride('_method'));
 // Import routers
 const webLettersRouter = require("./routes/web/lettersRouter")
 const apiLettersRouter = require("./routes/api/lettersRouter")
+const apiLettersRouter_v2 = require("./routes/api/lettersRouter_v2")
 
 // Web Routes
 app.get("/", (req, res) => res.send("This is the home!"));
@@ -28,6 +29,7 @@ app.use("/letters", webLettersRouter);
 
 // API Routes
 app.use("/api/letters", apiLettersRouter);
+app.use("/api/v2/letters", apiLettersRouter_v2);
 
 // Set up port for listening
 const PORT = process.env.PORT || 3000;

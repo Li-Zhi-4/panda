@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
 
   padding: 24px;
+  background: linear-gradient(117deg, #FFF 0%, #E8F7E9 100%);
 }
 
 div.container {

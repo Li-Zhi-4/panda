@@ -4,7 +4,7 @@ import './Letter.css';
 const API_BASE = import.meta.env.VITE_API_URL;
 
 async function fetchData(id) {
-    const res = await fetch(`${API_BASE}/api/letters/${id}`);
+    const res = await fetch(`${API_BASE}/api/v2/letters/${id}`);
     if (!res.ok) throw new Error(res.statusText);
     return res.json();
 }
