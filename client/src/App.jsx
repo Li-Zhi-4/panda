@@ -8,15 +8,12 @@ import { Letter } from './components/Letter/Letter';
 function App() {
 
   return (
-    // <div className="container">
-    //   <SideBar />
-    //   <div className='box'>
-    //     <ToolBar />
-    //     <Dashboard />
-    //   </div>
-    // </div>
-    <div className="box">
-      <Letter id='1'/>
+    <div className="container">
+      <SideBar />
+      <div className='box'>
+        <ToolBar />
+        <Dashboard />
+      </div>
     </div>
   );
 }

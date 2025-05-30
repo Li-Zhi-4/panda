@@ -6,7 +6,7 @@ const API_BASE = import.meta.env.VITE_API_URL;
 const LETTERS_PER_PAGE = 3;
 
 async function fetchData() {
-    const res = await fetch(`${API_BASE}/api/letters/`);
+    const res = await fetch(`${API_BASE}/api/v2/letters/`);
     if (!res.ok) throw new Error(res.statusText);
     return res.json();
 }

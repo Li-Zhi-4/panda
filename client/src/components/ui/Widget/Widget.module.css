@@ -24,13 +24,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    color: var(--title-colour);     /* text colour */
 }
 
 .title-h1 {
     font-size: 16px;
     font-weight: 600;               /* bold */
+    color: var(--title-colour);     /* text colour */
 }
 
 /* Day/Month/Year Toggle */
